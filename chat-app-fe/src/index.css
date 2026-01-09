@@ -1,0 +1,22 @@
+@import "tailwindcss";@layer utilities {
+  @keyframes bounce-delay {
+    0%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-bounce1 {
+    animation: bounce-delay 1.4s infinite 0s;
+  }
+
+  .animate-bounce2 {
+    animation: bounce-delay 1.4s infinite 0.2s;
+  }
+
+  .animate-bounce3 {
+    animation: bounce-delay 1.4s infinite 0.4s;
+  }
+}

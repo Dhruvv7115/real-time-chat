@@ -1,0 +1,20 @@
+{
+  "name": "chat-app-be",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx tsc -b && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "dhruv",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/ws": "^8.18.1",
+    "ws": "^8.18.3"
+  }
+}

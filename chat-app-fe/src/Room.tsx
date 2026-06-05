@@ -14,7 +14,7 @@ export default function Room() {
 	const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(
 		undefined,
 	);
-	const [isTyping, setIsTyping] = useState(false);
+
 	const [typingUsers, setTypingUsers] = useState<Record<string, boolean>>({});
 
 	const [messages, setMessages] = useState<Message[]>([
@@ -182,7 +182,6 @@ export default function Room() {
 						ref={messageRef}
 						onChange={(e) => {
 							messageRef.current = e.target;
-							setIsTyping(true);
 						}}
 						onKeyDown={(e) => {
 							if (e.key === "Enter") {
@@ -191,10 +190,7 @@ export default function Room() {
 							}
 							handleKeyDown();
 						}}
-						onBlur={() => {
-							sendTypingStatus(false); // ← ADD THIS
-							setIsTyping(false);
-						}}
+						onBlur={() => sendTypingStatus(false)}
 						autoFocus
 					/>
 					<button

@@ -25,7 +25,7 @@ export default function Room() {
 	const wssRef = useRef<WebSocket | null>(null);
 	useEffect(() => {
 		toast.success("Joined room : " + roomCode + " successfully!");
-		const wss = new WebSocket(import.meta.env.WS_BACKEND!);
+		const wss = new WebSocket(import.meta.env.VITE_WS_BACKEND!);
 		wssRef.current = wss;
 		wss.onopen = () => {
 			wss.send(

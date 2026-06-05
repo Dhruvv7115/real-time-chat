@@ -2,6 +2,10 @@
 
 A full-stack real-time chat application built with WebSockets for low-latency bi-directional messaging.
 
+<img width="800" alt="chat-app" src="https://github.com/user-attachments/assets/01cfab08-81ff-4753-9892-47ee4752186c" />
+
+**[Live Demo](https://real-time-chat-blond-two.vercel.app/)**
+
 ## Tech Stack
 - **Frontend:** React, TypeScript, CSS
 - **Backend:** Node.js, TypeScript, WebSockets (ws library)
